@@ -1,0 +1,5 @@
+part /boot --source rawcopy --sourceparams "file=/home/ewadhwa/poky/build/tmp/deploy/images/qemuarm64/Image" --no-table --align 8
+
+part / --source rootfs --ondisk mmcblk0 --fstype ext4 --label platform --align 1024
+
+bootloader --append "rootwait mem=1792M"
